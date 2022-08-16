@@ -1,5 +1,4 @@
 import React from 'react';
-import AddOrUpdate from "./AddOrUpdate";
 import {Link} from "react-router-dom";
 
 function Row({product, index}) {
@@ -12,8 +11,6 @@ function Row({product, index}) {
             <td>{product.price}</td>
             <td>{product.stock}</td>
             <td>
-                {/*<a href="#editEmployeeModal" className="edit" data-toggle="modal"><i*/}
-                {/*    className="material-icons" data-toggle="tooltip" title="Edit"></i></a>*/}
                 <Link className="detail" to={`/products/detail/${product.id}`}>
                     <i className="fa fa-info-circle"
                        aria-hidden="true"/>
@@ -24,8 +21,6 @@ function Row({product, index}) {
                 <Link className="delete" to={`/products/delete/${product.id}`}><i
                     className="material-icons" data-toggle="tooltip" title="Delete"></i>
                 </Link>
-                {/*<a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i*/}
-                {/*    className="material-icons" data-toggle="tooltip" title="Delete"></i></a>*/}
             </td>
         </tr>
 

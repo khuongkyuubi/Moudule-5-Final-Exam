@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {BrowserRouter, Link} from "react-router-dom";
 import Row from "./Row";
-import AddOrUpdate from "./AddOrUpdate";
 
 
 function Tables() {
@@ -12,7 +11,6 @@ function Tables() {
         const getProducts = async () => {
             try {
                 const res = await axios.get("http://localhost:3001/products")
-                console.log(res.data);
                 setProducts(res.data);
             } catch (err) {
                 console.log(err)

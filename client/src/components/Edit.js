@@ -74,7 +74,7 @@ function Edit() {
         <div className={"container"}>
             <form onSubmit={isEdit ? handleEdit : handleAdd}>
                 <div className="modal-header">
-                    <h4 className="modal-title">{isEdit ? handleEdit : handleAdd} Employee</h4>
+                    <h4 className="modal-title">{isEdit ? "Edit" : "Add"} Employee</h4>
                 </div>
                 <div className="modal-body">
                     <div className="form-group">
@@ -112,7 +112,7 @@ function Edit() {
                 </div>
                 <div className="modal-footer">
                     <input type="button" className="btn btn-default" data-dismiss="modal"
-                           defaultValue="Cancel"/>
+                           defaultValue="Cancel" onClick={()=> {navigate("/")}}/>
                     <input type="submit" className="btn btn-success" value={isEdit ? "Update" : "Add"}/>
                 </div>
             </form>
